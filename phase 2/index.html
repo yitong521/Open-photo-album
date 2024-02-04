@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://pic2.zhimg.com/80/v2-c099472f32f28edcb12b40f4173995fd_1440w.webp">
+	<title>Little cat</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Bootstrap JS and its dependencies -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#website-intro">Introduction</a></li>
+			<li><a href="#content-category">Category</a></li>
+			<li><a href="#main-content">Film list</a></li>
+			<li><a href="#custom-addition">Add your favorites</a></li>
+		</ul>
+	</nav>
+
+	<!-- Introduction -->
+	<div id="website-intro" class="intro-section">
+		<br>
+		<h1 class="main-title">Welcome to CatCinema Paradise</h1>
+		<p class="intro-paragraph">At CatCinema Paradise, we are committed to presenting the most delightful and
+			joy-filled cat-themed movies. Whether it's heartwarming family films or suspenseful adventures, we have
+			curated a variety of cat stories to satisfy your endless love for these mysterious creatures.</p>
+
+		<h2 class="section-title">Movie Genre Criteria</h2>
+		<p class="intro-paragraph">According to the criteria of animal classification, if a movie features memorable
+			animal images, it can be categorized into the respective list.</p>
+		<br>
+
+		<h2 class="section-title">Our Features</h2>
+		<table class="feature-table">
+			<tr>
+				<td class="feature-cell">
+					<figure class="feature-image">
+						<img class="feature-image"
+							src="https://pic1.zhimg.com/80/v2-bf362085a0fb586667c9ca24cf702ab8_1440w.webp"
+							alt="MovieScreenshots MyNeighborTotoro1">
+					</figure>
+				</td>
+				<td class="feature-cell">
+					<ol class="feature-list">
+						<li><strong>Cat Celebrities: </strong>Whether they are classic cartoon cats or real feline
+							actors, we have curated a variety of movies featuring cat celebrities for you.</li>
+						<li><strong>Cat Art Films: </strong>Cats serve as a muse for art, and we present to you some
+							unique and creative cat art films that showcase the perfect blend of art and cuteness.</li>
+						<li><strong>Stories of Cats and Humans: </strong>Here, you'll find not only the world of cats
+							but also heartwarming stories between cats and humans.</li>
+					</ol>
+				</td>
+			</tr>
+		</table>
+
+		<h2 class="section-title">Why Choose CatCinema Paradise</h2>
+		<table class="feature-table">
+			<tr>
+				<td class="feature-cell">
+					<ol class="feature-list">
+						<li><strong>Exclusive Content: </strong>We not only offer classic cat films but also collaborate
+							with emerging directors and producers to bring you exclusive and novel cat stories.</li>
+						<li><strong>Community Interaction: </strong>At CatCinema Paradise, you can engage with our
+							community, sharing your opinions, comments, and amusing cat anecdotes with fellow cat
+							enthusiasts.</li>
+						<li><strong>Cross-Platform Viewing: </strong>Whether you're watching on a computer or phone, we
+							provide a cross-platform viewing experience, allowing you to be accompanied by cats anytime,
+							anywhere.</li>
+					</ol>
+				</td>
+				<td class="feature-cell">
+					<figure class="feature-image">
+						<img class="feature-image"
+							src="https://pic2.zhimg.com/80/v2-d82b88001118d524210490cd00d84261_1440w.webp"
+							alt="MovieScreenshots MyNeighborTotoro1">
+					</figure>
+				</td>
+			</tr>
+		</table>
+
+		<br>
+		<p class="intro-paragraph">
+			You can visit <abbr class="imdb-abbr" title="Internet Movie Database" id="imdb-link">IMDb</abbr> to find
+			more cat movies.
+		</p>
+		<div class="imdb-tooltip" id="imdb-tooltip">
+			Internet Movie Database (IMDb) is an online database of information related to films, television programs,
+			home videos, and streaming content. It is a trusted source for movie-related information.
+		</div>
+		<p>
+			<a href="https://www.imdb.com/find/?q=cat&s=tt&ttype=ft&ref_=fn_ft" target="_blank"
+				class="search-link">Search more cat movies</a>
+		</p>
+	</div>
+
+	<!-- Images -->
+	<h2 class="cat-title">Cats are...</h2>
+	<table class="image-table">
+		<tr>
+			<td class="table-cell" id="cell-3">
+				<figure class="image-container">
+					<img class="table-image"
+						src="https://pic4.zhimg.com/80/v2-4bb776f0e3fda0cd61ba742e1b00e31b_1440w.webp"
+						alt="Late Night Companionship">
+					<figcaption class="image-caption">Late Night Companionship</figcaption>
+				</figure>
+			</td>
+			<td class="table-cell" id="cell-1">
+				<figure class="image-container">
+					<img class="table-image"
+						src="https://pic3.zhimg.com/80/v2-08a241743e2b934d23b61864dc0fe3f6_1440w.webp"
+						alt="Vitality Elf">
+					<figcaption class="image-caption">Vitality Elf</figcaption>
+				</figure>
+			</td>
+			<td class="table-cell" id="cell-5">
+				<figure class="image-container">
+					<img class="table-image"
+						src="https://pic4.zhimg.com/80/v2-4518a96ab7c7a110b790e03c487d1d1b_1440w.webp" alt="Cozy Nap">
+					<figcaption class="image-caption">Cozy Nap</figcaption>
+				</figure>
+			</td>
+			<td class="table-cell" id="cell-2">
+				<figure class="image-container">
+					<img class="table-image"
+						src="https://pic3.zhimg.com/80/v2-33cd14eebb7796731d3d6b13fee9a8ce_1440w.webp"
+						alt="Share Happiness">
+					<figcaption class="image-caption">Share Happiness</figcaption>
+				</figure>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<br>
+	<br>
+
+	<!-- Category -->
+	<h2>Here, you can find everything about cats... </h2>
+	<div id="content-category" class="category-section">
+		<div class="channel">Cat Celebrities</div>
+		<div class="channel">Cat Adventure Stories</div>
+		<div class="channel">Cat Art Films</div>
+		<div class="channel">Stories of Cats and Humans</div>
+		<div class="channel">Cat's Pictures and Memes </div>
+	</div>
+
+	<br>
+	<br>
+
+	<!-- Quote -->
+	<blockquote cite="https://www.imdb.com/title/tt0244316/characters/nm0950548" class="quote-section">
+		<p>My uncle says we live three times as long since man invented movies. </p>
+		<footer>— Edward Yang, <cite>a one and a two</cite></footer>
+	</blockquote>
+
+	<br>
+	<div class="intro-section">
+		<h1 class="main-title">When cats meet films: </h1>
+		<h2> A Cinematic Odyssey into the Cosmos and Humanity</h2>
+		<section class="intro-text">
+			<p>On the grand screen, a perpetual yearning for renewal persists, fervently breaking through boundaries.
+			</p>
+			<p>With determined effort, it swings open the revolving door to the transcendent, propelling us forward into
+				the vastness of the unknown cosmos, then turns around, guiding us back to the fervent realm of humanity.
+			</p>
+			<p><b class="emphasis-text">Images flow eternally, seeking the grandeur of the distant while safeguarding
+					the minutiae of the heart.</b></p>
+			<p>The screen flickers, projecting the unevenness of life and the richness of the soul. </p>
+			<p>These are not ordinary pixels; they are the afterglow of the universe's birth.</p>
+		</section>
+		<h2 class="section-title">How will you interact with existing movies?</h2>
+		<dl class="feedback-list">
+			<dt><dfn class="feedback-term">Like</dfn></dt>
+			<dd class="feedback-description">Tag your favorite movies</dd>
+			<dt><dfn class="feedback-term">Collection</dfn></dt>
+			<dd class="feedback-description">Add movie to favorites</dd>
+			<dt><dfn class="feedback-term">Comment</dfn></dt>
+			<dd class="feedback-description">Share comments for the film</dd>
+		</dl>
+	</div>
+
+	<!-- Film list section -->
+
+	<!-- Form row -->
+	<div id="noResultsMessage">No results found. Please try a new search or add new content.</div>
+	<form class="inputform" id="mediaForm" action="https://webtech.labs.vu.nl/api24/67d2e8b7" method="post">
+		<table id="main-content">
+			<caption id="formtitle">Cat Art Film List</caption>
+			<thead id="mediaTableHead">
+				<tr>
+					<th>Poster</th>
+					<th>Name</th>
+					<th>Year</th>
+					<th>Genre</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody id="mediaTableBody">
+			</tbody>
+		</table>
+	</form>
+	<br>
+	<!-- Trigger/Open The Modal -->
+	<button type="button" id="addFilm" class="btn btn-primary" data-toggle="modal" data-target="#modalFilm">
+		Add New Film & Update Film
+	</button>
+
+	<!-- The Modal -->
+	<div class="modal fade" id="modalFilm" tabindex="-1" role="dialog" aria-labelledby="modalFilmLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalFilmLabel">New Film Details</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="newFilmFormBootstrap">
+
+						<label for="modalNewPoster">Poster URI:</label>
+						<input type="url" id="modalNewPoster" name="poster" placeholder="Poster URL" required
+							autocomplete="on"><br>
+
+						<label for="modalNewName">Name:</label>
+						<input type="text" id="modalNewName" name="name" placeholder="Name" required
+							autocomplete="on"><br>
+
+						<label for="modalNewYear">Year:</label>
+						<input type="number" id="modalNewYear" name="year" placeholder="Year" required
+							autocomplete="on"><br>
+
+						<label for="modalNewGenre">Genre:</label>
+						<input type="text" id="modalNewGenre" name="genre" placeholder="Genre" required
+							autocomplete="on"><br>
+
+						<label for="modalNewDescription">Description:</label>
+						<textarea id="modalNewDescription" name="description" placeholder="Description" rows="4"
+							required autocomplete="on" required></textarea><br>
+						<div id="updateSpecificEntrySection">
+							<label for="updateSpecificEntry">Input the ID</label>
+							<textarea id="updateSpecificEntry" name="updateSpecific"
+								placeholder="Type in ID of the specific entry..." rows="1"></textarea>
+							<br>
+							<button type="button" id="updatemediaBtn">Update Media content</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="submitFilmBtn">Submit</button>
+					<div id="errorMsg"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<!-- Reset database part -->
+	<div id="RestButtonPart">
+		<label for="resetDatabaseBtn">Press this button and you will refresh your film database:</label>
+		<br>
+		<button type="button" id="resetDatabaseBtn">Reset Database</button>
+	</div>
+	<br>
+	<!-- search by year -->
+	<div id="additionalControls">
+		<label for="yearDropdown">Select Year:</label>
+		<br>
+		<select id="yearDropdown"></select>
+	</div>
+	<br>
+	<!-- search by text -->
+	<div id="searchbyText">
+		<label for="searchingTextinput">Search for the text</label>
+		<textarea id="searchingTextinput" name="searchingText" placeholder="Type in the keyword..." rows="4"></textarea>
+		<button type="button" id="searchingTextBtn">Search</button>
+	</div>
+	<!-- footpart -->
+	<div id="foot">
+		<ul id="u2">
+			<li><a
+					href="https://www.amazon.nl/privacyprefs/imdb?disableNav=true&locale=en_US&cmpRef=AYADeJztA9FKqQpJWo9f4t9jNZMAagACABVhd3MtY3J5cHRvLXB1YmxpYy1rZXkAREF6YkhHZVFJak9UUkVjdkZtZTZjckpVTVRLTTFSc1ZjSlA2RlZaQ0hhK1FjZzRtclFyNitaSzZhOEJOb3JkNzhMUT09AAZkb21haW4AATYAAQAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtZWFzdC0xOjI0ODMzMzc2NTMwMjprZXkvODEzOTI3M2YtYWRjOC00YTFhLTgzN2EtYzMwYzIzNGZkNTgzALgBAgEAeEtdKoeKmbeeHzp9-zZrvUCpooJ-xR5sKxdiyZovlQlSAWIAZE9rWTot_boQwDCRYP4AAAB-MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAzbJzjevGBwZ_nD2V0CARCAO7F49wEUJaQcpxUM-GzlsqVeon2oiksjq900Vkc57nFTRSOf-3SfzQRBTkFVa-AD1--esUjlqh5QfiNcAgAAAAAMAAAQAAAAAAAAAAAAAAAAAJ07y6Hsl70mssNByUoirCL_____AAAAAQAAAAAAAAAAAAAAAQAAAHoLwQJJRufODDpk1Wg40AJbOAYrjV3kG3A-9Vu6Q8Nb2t38tYiVozPKU4fPlaltJKsVCyykwnyzkYaI75fdgza0WtuZaMLcoFGb8xFBCAkKAhmCX7h6j-liRU6s-RznubBGwUwqqc2KguTopi9yvvPMaj8u0_mffWZ4-8gqpccO7gII47nSi5ZUTJ4AZzBlAjEAz8U0SiYLMQ0-p9G0Kgu8wKXrBxpToZtr2dmyzd8dT10_CiM1xPrpbNKgFoRBzkW0AjA2clgNFy7oZZKSDP9cF8rphcDL1BO38nOMoHS-wspQmmAyJ7x9pzGoysd2nUA-lOI">Your
+					Ads Privacy Choices</a></li>
+			<li><a href="https://www.imdb.com/privacy?ref_=ft_pvc">Privacy Notice</a></li>
+			<li><a href="https://www.imdb.com/conditions?ref_=ft_cou">Conditions of Use</a></li>
+		</ul>
+	</div>
+
+	<div id="bottom">
+		<pre>
+						Contact us: 0205989898
+						Address: De Boelelaan 1105, 1081 HV Amsterdam
+						1990-2024 by IMDBcatcat.com, Inc.
+		</pre>
+	</div>
+</body>
+
+</html>
