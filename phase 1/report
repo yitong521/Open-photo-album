@@ -1,0 +1,18 @@
+# Webpage Introduction and Display Compatibility Report
+
+## Webpage Overview
+1. Internal Navigation Bar: At the top of the webpage, we've included an internal navigation bar for easy access to different sections. It contains links allowing users to navigate directly to specific content areas.
+2. Webpage Introduction: In the main body of the webpage, we provide a detailed overview of its features, including images and decorative elements, to give users a clear understanding of the overall content.
+3. Global Site Navigation: Positioned at the top or a suitable location, the global site navigation allows easy navigation to other relevant webpages. This navigation bar can be further enriched to provide more useful links.
+4. Film Gallery Introduction: In the middle of the page, we provide a detailed introduction to the film gallery section, offering users a clear understanding of this specific content.
+5. Footer Form: At the bottom of the page, we provide an input form for users to submit information or interact with the website.
+
+## Mobile/Pad Mini-Related Designs
+1. Overall Layout Adjustment: Reduce overall page margins to enhance compactness.
+2. Navigation Bar Style Optimization: Through media queries, navigation list items are vertically arranged on small screens and horizontally centered. Max-width and margin settings limit the navigation module's width, and zero padding in media queries ensures a more compact style on small screens. This section reserves JavaScript interaction for implementing a hidden menu in subsequent stages.
+3. Feature Area Content Presentation: On small screens, textual content is presented first, followed by image content, ensuring they are not displayed on the same line for improved readability.
+4. IMDb Clicks and Interaction Optimization: To increase touch area on mobile devices, ensure users can trigger prompt messages by tapping near the IMDb abbreviation. Clicking anywhere near IMDb on small screens should trigger the same prompt, enhancing user experience.
+5. Image Layout Adjustment: On small screens, the image section displays one image and its corresponding explanation per row, rather than four rows side by side, adapting to limited screen width.
+6. Category Section Style Adjustment: On small screens, the category section vertically arranges each div, reducing inner and outer margins for a more compact appearance. JavaScript will be used in subsequent stages to implement a dropdown menu.
+7. Large Table Modular Display: On small screens, each row of the large table is modularly displayed, showing the poster first, followed by name, year, genre, and rating. By hiding column names and adjusting row spacing, the page becomes more suitable for small screen sizes.
+8. Image Resolution Optimization: On small screens, reduce the resolution of all images by 30% to accelerate page loading and enhance user experience.
