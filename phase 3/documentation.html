@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Server Interaction Documentation</title>
+</head>
+<body>
+    <h1>Documentation</h1>
+
+    <p>
+        <h2>1. Retrieve the Full Data Set</h2>
+        <b>HTTP Status Code Table</b>
+        <table border="1">
+            <tr>
+                <th>Status Code</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Server Error</td>
+            </tr>
+            <tr>
+                <td>404</td>
+                <td>No data</td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>Load the movies successfully</td>
+            </tr>
+        </table>
+        <br>
+        Endpoint: http://localhost:3000/hello <br><br>
+        HTTP Method: GET <br><br>
+        Request: Parameters (URL): None. <br><br>
+        Posted Data (Body): None. <br><br>
+        MIME format in response: application/json <br><br>
+        Error Response (Status 500)<br><br>
+        Example:<br><br>
+        {"error":"Error executing SQL query:" }<br><br>
+        Error Response (Status 404): The database is empty.<br><br>
+        Example:<br><br>
+        {"error":"No records found" }<br><br>
+        Success Response (Status 200): List the objects of the table.<br><br>
+        Examle: <br><br>
+        {
+            "id":1, <br><br>
+            "name":"Arcane", <br><br>
+            "year":"2021", <br><br>
+            "genre":"animation, action, adventure, tv-show", <br><br>
+            "poster":"https://www.nerdpool.it/wp-content/uploads/2021/11/poster-arcane.jpg",<br><br>
+            "description":"Set in Utopian Piltover and the oppressed underground of Zaun, the story follows the origins of two iconic League Of Legends champions and the power that will tear them apart."
+        } <br><br>
+        {
+            "id":2, <br><br>
+            "name":"Celeste",<br><br>
+            "year":"2018",<br><br>
+            "genre":"platformer, video-game",<br><br>
+            "poster":"https://upload.wikimedia.org/wikipedia/commons/0/0f/Celeste_box_art_full.png",<br><br>
+            "description":"Celeste is a critically acclaimed two-dimensional platform game developed by Maddy Makes Games. The player controls Madeline, a young woman who sets out to climb Celeste Mountain. The game features tight controls, challenging levels, and a touching story about overcoming personal demons.
+        }<br><br>
+        
+        <h2>2. Add Data for a New Movie</h2>
+        <b>HTTP Status Code Table</b>
+        <table border="1">
+            <tr>
+                <th>Status Code</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>Internal Server Error</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>Incomplete data</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Add the movie successfully</td>
+            </tr>
+        </table>
+        <br>
+        Endpoint: http://localhost:3000/hello/add <br><br>
+        HTTP Method: POST <br><br>
+        Request: Parameters (URL): None.<br><br>
+        Posted Data (Body): The information of the movie.<br><br>
+        MIME format in response: application/json<br><br>
+        Error Response (Status 400)<br><br>
+        Example:<br><br>
+        {
+            "name":"Arcane", <br><br>
+            "year":" ", <br><br>
+            "genre":"animation, action, adventure, tv-show", <br><br>
+            "poster":" ",<br><br>
+            "description":" "
+        }<br><br>
+        {"error":"Incomplete data. Please provide all required fields." }<br><br>
+        Success Response (Status 201): Add the movie successfully.<br><br>
+        Example:<br><br>
+        {
+            "name":"Arcane", <br><br>
+            "year":"2021", <br><br>
+            "genre":"animation, action, adventure, tv-show", <br><br>
+            "poster":"https://www.nerdpool.it/wp-content/uploads/2021/11/poster-arcane.jpg",<br><br>
+            "description":"Set in Utopian Piltover and the oppressed underground of Zaun, the story follows the origins of two iconic League Of Legends champions and the power that will tear them apart."
+        }<br><br>
+        {"message":"You have add a new line"}<br><br>
+
+        <h2>3. List the Data of a Specific Movie:</h2>
+            <b>HTTP Status Code Table</b>
+            <table border="1">
+                <tr>
+                    <th>Status Code</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Internal Server Error</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>Can't find the movie</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>The input ID parameter is invalid</td>
+                </tr>
+                <tr>
+                    <td>201</td>
+                    <td>List the specific movie</td>
+                </tr>
+            </table>
+            <br>
+        Endpoint: http://localhost:3000/hello/:id (Replace :id with the actual ID)<br><br>
+        HTTP Method: GET <br><br>
+        Request: Parameters (URL): id, the identifier of the movie<br><br>
+        Posted Data (Body): None.<br><br>
+        MIME format in response: application/json<br><br>
+        Error Response (Status 400):Invalid ID parameter <br><br>
+        Example:<br><br>
+        input:{"id": a}<br><br>
+        output:{"error":"Invalid ID parameter" }<br><br>
+        Success Response (Status 200): List a specific movie.<br><br>
+        Example:<br><br>
+        input:{"id": 1}<br><br>
+        output:{
+            "id":1, <br><br>
+            "name":"Arcane", <br><br>
+            "year":"2021", <br><br>
+            "genre":"animation, action, adventure, tv-show", <br><br>
+            "poster":"https://www.nerdpool.it/wp-content/uploads/2021/11/poster-arcane.jpg",<br><br>
+            "description":"Set in Utopian Piltover and the oppressed underground of Zaun, the story follows the origins of two iconic League Of Legends champions and the power that will tear them apart."
+        }<br><br>
+
+        <h2>4. Change Data of a Specific Movie:</h2>
+        <b>HTTP Status Code Table</b>
+            <table border="1">
+                <tr>
+                    <th>Status Code</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Internal Server Error</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>The input data is incomplete</td>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Change data of the specific movie successfully</td>
+                </tr>
+            </table>
+            <br>
+        Endpoint: http://localhost:3000/hello/:id (Replace :id with the actual ID)<br><br>
+        HTTP Method: PUT <br><br>
+        Request: Parameters (URL): id, the identifier of the movie<br><br>
+        Posted Data (Body): The information of the movie.<br><br>
+        MIME format in response: application/json<br><br>
+        Error Response (Status 500)<br><br>
+        Example:<br><br>
+        input:{
+            "id":1, <br><br>
+            "name":"Arcane", <br><br>
+            "year":"2024", <br><br>
+            "genre":"animation, action, adventure, tv-show", <br><br>
+            "poster":"https://www.nerdpool.it/wp-content/uploads/2021/11/poster-arcane.jpg",<br><br>
+            "description":" "
+        }<br><br>
+        {"error":"Incomplete data. Please provide all required fields." }<br><br>
+        Success Response (Status 200)<br><br>
+        Example:<br><br>
+        input:{
+            "id":1, <br><br>
+            "name":"Arcane", <br><br>
+            "year":"2024", <br><br>
+            "genre":"animation, action, adventure, tv-show", <br><br>
+            "poster":"https://www.nerdpool.it/wp-content/uploads/2021/11/poster-arcane.jpg",<br><br>
+            "description":"Set in Utopian Piltover and the oppressed underground of Zaun, the story follows the origins of two iconic League Of Legends champions and the power that will tear them apart."
+        }<br><br>
+        output:{ message: "You have change data of a specific item" }<br><br>
+
+        <h2>5. Remove Data of a Specific Movie</h2>
+        <b>HTTP Status Code Table</b>
+            <table border="1">
+                <tr>
+                    <th>Status Code</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>Internal Server Error</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>The input ID parameter is invalid</td>
+                </tr>
+                <tr>
+                    <td>204</td>
+                    <td>Delete the specific movie successfully</td>
+                </tr>
+            </table>
+            <br>
+        Endpoint: http://localhost:3000/hello/:id (Replace :id with the actual ID)<br><br>
+        HTTP Method: DELETE <br><br>
+        Request: Parameters (URL): id, the identifier of the movie<br><br>
+        Posted Data (Body):None.<br><br>
+        MIME format in response: application/json<br><br>
+        Error Response (Status 500)<br><br>
+        Example:<br><br>
+        {"error":"Error executing SQL query:" }<br><br>
+        Success Response (Status 204)<br><br>
+        Example:<br><br>
+        input:{"id": 1}<br><br>
+        output:{ message: "You have remove data of a specific item" }<br><br><br>
+
+        <h2>6. Reset the database</h2>
+        <b>HTTP Status Code Table</b>
+            <table border="1">
+                <tr>
+                    <th>Status Code</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>1.Failed to delete data from the database<br>
+                        2.Failed to retrieve data from db_backup<br>
+                        3.Failed to insert data into the database</td>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>Reset the database successfully</td>
+                </tr>
+            </table>
+            <br>
+        Endpoint: http://localhost:3000/hello/:id (Replace :id with the actual ID)<br><br>
+        HTTP Method: DELETE <br><br>
+        Request: Parameters (URL): None.<br><br>
+        Posted Data (Body):None.<br><br>
+        MIME format in response: application/json<br><br>
+        Error Response (Status 500)<br><br>
+        Example:<br><br>
+        {"error":"Failed to delete data from the database" }<br><br>
+        Success Response (Status 200)<br><br>
+        Example:<br><br>
+        output:{ message: "Database reset successfully" }<br><br><br>
+    </p>
+
+</body>
+</html>
